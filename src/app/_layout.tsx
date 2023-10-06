@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import { View } from 'react-native'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import { Slot } from 'expo-router'
 import {
@@ -18,10 +18,10 @@ export default function Layout() {
   })
 
   return (
-    <View className="flex-1 bg-gray-800">
+    <SafeAreaProvider className="flex-1 bg-gray-900">
       <StatusBar style="light" backgroundColor="transparent" translucent />
 
       {fontsLoaded ? <Slot /> : <Loading />}
-    </View>
+    </SafeAreaProvider>
   )
 }

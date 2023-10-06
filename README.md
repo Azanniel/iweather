@@ -9,6 +9,8 @@
 ## 🎮 Techs Relevantes
 
 - [Expo Router](https://docs.expo.dev/routing/introduction/): Expo Router é um roteador baseado em arquivo para React Native e aplicativos da web.
+- [Tailwindcss](https://tailwindcss.com/): Uma estrutura CSS utilitária repleta de classes.
+- [NativeWind](https://www.nativewind.dev/): NativeWind usa Tailwind CSS como linguagem de script para criar um sistema de estilo universal para React Native.
 
 ## 🃏 Layout
 
