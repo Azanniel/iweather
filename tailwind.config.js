@@ -16,6 +16,12 @@ module.exports = {
           900: '#13131A',
         },
       },
+
+      fontFamily: {
+        sans: ['Nunito_400Regular'],
+        strong: ['Nunito_700Bold'],
+        heavy: ['Nunito_800ExtraBold'],
+      },
     },
   },
   plugins: [],
