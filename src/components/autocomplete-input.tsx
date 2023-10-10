@@ -15,21 +15,21 @@ export function AutocompleteInput() {
         <ActivityIndicator size="small" color={colors.blue[300]} />
       </View>
 
-      <View className="absolute left-0 right-0 top-16 overflow-hidden rounded-lg">
+      <View className="absolute left-0 right-0 top-16 divide-y divide-gray-600 overflow-hidden rounded-lg">
         <TouchableOpacity>
-          <Text className="border-b border-gray-600 bg-gray-500 px-5 py-4 font-sans text-base text-gray-100">
+          <Text className="bg-gray-500 px-5 py-4 font-sans text-base text-gray-100">
             Porto Alegre, RS - Brasil
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Text className="border-b border-gray-600 bg-gray-500 px-5 py-4 font-sans text-base text-gray-100">
+          <Text className="bg-gray-500 px-5 py-4 font-sans text-base text-gray-100">
             Porto Seguro, BA - Brasil
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Text className="border-b border-gray-600 bg-gray-500 px-5 py-4 font-sans text-base text-gray-100">
+          <Text className="bg-gray-500 px-5 py-4 font-sans text-base text-gray-100">
             Porto - Portugal
           </Text>
         </TouchableOpacity>
