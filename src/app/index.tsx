@@ -1,6 +1,7 @@
 import { Text, View, ImageBackground, ScrollView } from 'react-native'
 import Logo from '@/assets/logo.svg'
 import backgroundImg from '@/assets/background.png'
+import { AutocompleteInput } from '@/components/autocomplete-input'
 
 export default function Page() {
   return (
@@ -21,6 +22,8 @@ export default function Page() {
           <Text className="mb-8 mt-1 text-center font-sans text-sm text-gray-200">
             Escolha um local para ver a previsão do tempo
           </Text>
+
+          <AutocompleteInput />
         </View>
       </ImageBackground>
     </ScrollView>
