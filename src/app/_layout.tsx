@@ -1,4 +1,6 @@
 /* eslint-disable camelcase */
+import '@/libs/dayjs'
+
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import { Slot } from 'expo-router'

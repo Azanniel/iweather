@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@expo-google-fonts/nunito": "^0.2.3",
+    "axios": "^1.5.1",
+    "dayjs": "^1.11.10",
     "expo": "~49.0.13",
     "expo-constants": "~14.4.2",
     "expo-font": "~11.4.0",
@@ -24,11 +26,13 @@
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-svg": "13.9.0",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^1.14.0",
+    "@react-native-async-storage/async-storage": "1.18.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@rocketseat/eslint-config": "^2.1.0",
+    "@types/axios": "^0.14.0",
     "@types/react": "~18.2.14",
     "eslint": "^8.50.0",
     "prettier-plugin-tailwindcss": "^0.5.5",
