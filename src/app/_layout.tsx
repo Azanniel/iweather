@@ -11,6 +11,7 @@ import {
   Nunito_800ExtraBold,
 } from '@expo-google-fonts/nunito'
 import { Loading } from '@/components/loading'
+import { CityProvider } from '@/contexts/city-context'
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
@@ -23,7 +24,7 @@ export default function Layout() {
     <SafeAreaProvider className="flex-1 bg-gray-900">
       <StatusBar style="light" backgroundColor="transparent" translucent />
 
-      {fontsLoaded ? <Slot /> : <Loading />}
+      <CityProvider>{fontsLoaded ? <Slot /> : <Loading />}</CityProvider>
     </SafeAreaProvider>
   )
 }

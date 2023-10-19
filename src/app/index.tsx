@@ -1,10 +1,18 @@
 import { Text, View, ImageBackground, ScrollView } from 'react-native'
-import { Link } from 'expo-router'
+import { Redirect } from 'expo-router'
 import { AutocompleteInput } from '@/components/autocomplete-input'
+import { useCity } from '@/hooks/use-city'
+
 import Logo from '@/assets/logo.svg'
 import backgroundImg from '@/assets/background.png'
 
 export default function Page() {
+  const { city } = useCity()
+
+  if (city) {
+    return <Redirect href="/dashboard" />
+  }
+
   return (
     <ScrollView>
       <ImageBackground
@@ -23,10 +31,6 @@ export default function Page() {
           <Text className="mb-8 mt-1 text-center font-sans text-sm text-gray-200">
             Escolha um local para ver a previsão do tempo
           </Text>
-
-          <Link className="mb-4 text-center text-blue-300" href="/dashboard">
-            Go to dash
-          </Link>
 
           <AutocompleteInput />
         </View>
