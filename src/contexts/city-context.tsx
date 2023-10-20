@@ -4,6 +4,7 @@ import {
   getStorageCity,
   saveStorageCity,
 } from '@/libs/storage/city-storage'
+import { useDashboardRoute } from '@/hooks/use-dashboard-route'
 
 interface CityContextType {
   cityIsLoading: boolean
@@ -21,10 +22,12 @@ function CityProvider({ children }: CityProviderProps) {
   const [city, setCity] = useState<City | null>(null)
   const [cityIsLoading, setCityIsLoading] = useState(true)
 
+  useDashboardRoute(city !== null)
+
   async function handleChanceCity(selectedCity: City) {
     setCityIsLoading(true)
 
-    await saveStorageCity(selectedCity)
+    // await saveStorageCity(selectedCity)
 
     setCity(selectedCity)
     setCityIsLoading(false)

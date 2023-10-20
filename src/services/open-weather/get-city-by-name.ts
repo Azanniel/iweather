@@ -32,7 +32,6 @@ export async function getCityByName(name: string): Promise<City | null> {
 
     return city
   } catch (error) {
-    console.error(error)
     return null
   }
 }

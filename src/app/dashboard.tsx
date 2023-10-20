@@ -4,7 +4,7 @@ import { WeatherToday } from '@/components/weather-today'
 import { WeatherDetails } from '@/components/weather-details'
 import { NextDays } from '@/components/next-days'
 
-export default function Page() {
+export default function Dashboard() {
   return (
     <SafeAreaView className="flex-1 bg-gray-900 px-5 pb-0 pt-2">
       <WeatherToday />
