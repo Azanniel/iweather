@@ -11,6 +11,8 @@
 - [Expo Router](https://docs.expo.dev/routing/introduction/): Expo Router é um roteador baseado em arquivo para React Native e aplicativos da web.
 - [Tailwindcss](https://tailwindcss.com/): Uma estrutura CSS utilitária repleta de classes.
 - [NativeWind](https://www.nativewind.dev/): NativeWind usa Tailwind CSS como linguagem de script para criar um sistema de estilo universal para React Native.
+- [Jest](https://jestjs.io/pt-BR/): Jest é um poderoso Framework de Testes em JavaScript com um foco na simplicidade.
+- [DayJS](https://jestjs.io/pt-BR/): Day.js é uma biblioteca JavaScript minimalista que analisa, valida, manipula e exibe datas e horas para navegadores modernos.
 
 ## 🃏 Layout
 
