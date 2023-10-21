@@ -1,11 +1,36 @@
 import { ImageBackground, Text, View } from 'react-native'
+import dayjs from 'dayjs'
 
-import backgroundImg from '@/assets/bg-weathers/few-clouds-night.png'
-import Icon from '@/assets/icons-weathers/few-clouds-night.svg'
+import { weatherIcons } from '@/utils/weather-icons'
+import { isDaytimeNow } from '@/utils/is-daytime-now'
 
-export function WeatherToday() {
+interface Weather {
+  temp: string
+  temp_min: string
+  temp_max: string
+  description: string
+  details: typeof weatherIcons.Clouds
+}
+
+interface WeatherTodayProps {
+  city: string
+  weather: Weather
+}
+
+export function WeatherToday(props: WeatherTodayProps) {
+  const today = dayjs(new Date()).format('dddd, DD [de] MMMM [de] YYYY')
+  const isDay = isDaytimeNow()
+
+  const backgroundImg = isDay
+    ? props.weather.details.bg_day
+    : props.weather.details.bg_night
+
+  const Icon = isDay
+    ? props.weather.details?.icon_day
+    : props.weather.details?.icon_night
+
   return (
-    <View className="rounded-xl bg-gray-800 p-3">
+    <View className="rounded-xl bg-gray-800">
       <ImageBackground
         className="justify-between overflow-hidden rounded-lg bg-gray-700"
         resizeMode="cover"
@@ -13,26 +38,24 @@ export function WeatherToday() {
       >
         <View className="p-5">
           <Text className="font-strong text-base text-gray-100">
-            Porto Alegre, RS
+            {props.city}
           </Text>
 
-          <Text className="font-sans text-xs text-gray-100">
-            Segunda-feira, 15 de maio de 2023
-          </Text>
+          <Text className="font-sans text-xs text-gray-100">{today}</Text>
         </View>
 
         <View className="mt-2 w-full flex-row">
           <View className="ml-5 flex-1 justify-end pb-5">
             <Text className="font-heavy text-5xl leading-[52px] text-gray-100">
-              28ºc
+              {props.weather.temp}
             </Text>
 
             <Text className="font-strong text-base text-gray-100">
-              26ºc / 32ºc
+              {props.weather.temp_min} / {props.weather.temp_max}
             </Text>
 
             <Text className="font-sans text-sm capitalize text-gray-100">
-              Poucas nuvens
+              {props.weather.description}
             </Text>
           </View>
 

@@ -6,7 +6,19 @@ import WindIcon from '@/assets/icons-weathers/wind.svg'
 import DropIcon from '@/assets/icons-weathers/drop.svg'
 import SunIcon from '@/assets/icons-weathers/sun.svg'
 
-export function WeatherDetails() {
+interface DataDetails {
+  temp_kf: string
+  humidity: string
+  feels_like: string
+  wind_speed: string
+  probability: string
+}
+
+interface WeatherDetailsProps {
+  data: DataDetails
+}
+
+export function WeatherDetails({ data }: WeatherDetailsProps) {
   return (
     <View className="w-full divide-y divide-gray-700 rounded-xl bg-gray-800 px-4">
       <View className="w-full flex-row items-center py-5">
@@ -16,7 +28,9 @@ export function WeatherDetails() {
           Sensação térmica
         </Text>
 
-        <Text className="font-strong text-base text-gray-100">26ºc</Text>
+        <Text className="font-strong text-base text-gray-100">
+          {data.feels_like}
+        </Text>
       </View>
 
       <View className="w-full flex-row items-center py-5">
@@ -26,7 +40,9 @@ export function WeatherDetails() {
           Probabilidade de chuva
         </Text>
 
-        <Text className="font-strong text-base text-gray-100">0%</Text>
+        <Text className="font-strong text-base text-gray-100">
+          {data.probability}
+        </Text>
       </View>
 
       <View className="w-full flex-row items-center py-5">
@@ -36,7 +52,9 @@ export function WeatherDetails() {
           Velocidade do vento
         </Text>
 
-        <Text className="font-strong text-base text-gray-100">8km/h</Text>
+        <Text className="font-strong text-base text-gray-100">
+          {data.wind_speed}
+        </Text>
       </View>
 
       <View className="w-full flex-row items-center py-5">
@@ -46,7 +64,9 @@ export function WeatherDetails() {
           Umidade do ar
         </Text>
 
-        <Text className="font-strong text-base text-gray-100">40%</Text>
+        <Text className="font-strong text-base text-gray-100">
+          {data.humidity}
+        </Text>
       </View>
 
       <View className="w-full flex-row items-center py-5">
@@ -56,7 +76,9 @@ export function WeatherDetails() {
           Índice UV
         </Text>
 
-        <Text className="font-strong text-base text-gray-100">5</Text>
+        <Text className="font-strong text-base text-gray-100">
+          {data.temp_kf}
+        </Text>
       </View>
     </View>
   )
