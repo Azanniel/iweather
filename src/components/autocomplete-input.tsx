@@ -33,7 +33,10 @@ export function AutocompleteInput(props: AutocompleteInputProps) {
         )}
       </View>
 
-      <View className="absolute left-0 right-0 top-16 divide-y divide-gray-600 overflow-hidden rounded-lg">
+      <View
+        testID="options"
+        className="absolute left-0 right-0 top-16 divide-y divide-gray-600 overflow-hidden rounded-lg"
+      >
         {props.data.map((city) => {
           return (
             <TouchableOpacity

@@ -45,4 +45,13 @@ describe('Component: Autocomplete Input', () => {
     expect(onPress).toBeCalledTimes(1)
     expect(onPress).toBeCalledWith(cities[1])
   })
+
+  it('should not be show options when data props is empty', () => {
+    const { getByTestId } = render(
+      <AutocompleteInput data={[]} placeholder="Example placeholder" />,
+    )
+
+    const options = getByTestId('options')
+    expect(options.children).toHaveLength(0)
+  })
 })
