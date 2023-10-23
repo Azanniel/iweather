@@ -12,7 +12,7 @@ interface Day {
   min: string
 }
 
-interface WeatherAPIResponse {
+export interface WeatherAPIResponse {
   list: {
     pop: number
     dt_txt: string
