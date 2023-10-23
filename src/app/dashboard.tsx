@@ -2,18 +2,18 @@ import { useEffect, useState } from 'react'
 import { ScrollView, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
+import { Loading } from '@/components/loading'
 import { AutocompleteInput } from '@/components/autocomplete-input'
 import { WeatherToday } from '@/components/weather-today'
 import { WeatherDetails } from '@/components/weather-details'
 import { NextDays } from '@/components/next-days'
 import { useCity } from '@/hooks/use-city'
+import { getCityByName } from '@/services/open-weather/get-city-by-name'
 import {
   GetWeatherByCityResponse,
   getWeatherByCity,
 } from '@/services/open-weather/get-weather-by-city'
 import { City } from '@/libs/storage/city-storage'
-import { Loading } from '@/components/loading'
-import { getCityByName } from '@/services/open-weather/get-city-by-name'
 
 export default function Dashboard() {
   const [search, setSearch] = useState('')

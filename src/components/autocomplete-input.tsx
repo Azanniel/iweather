@@ -4,7 +4,7 @@ import colors from 'tailwindcss/colors'
 import { City } from '@/libs/storage/city-storage'
 
 interface AutocompleteInputProps {
-  isLoading: boolean
+  isLoading?: boolean
   placeholder: string
   data: City[]
   value?: string
@@ -17,7 +17,7 @@ export function AutocompleteInput(props: AutocompleteInputProps) {
     <View className="relative z-10 w-full">
       <View className="h-14 w-full flex-row rounded-lg bg-gray-600 px-5 font-sans text-base">
         <TextInput
-          className="flex-1 text-zinc-100 placeholder:text-zinc-100"
+          className="flex-1 text-zinc-100"
           placeholder={props.placeholder}
           placeholderTextColor={colors.gray[400]}
           value={props.value}
@@ -25,7 +25,11 @@ export function AutocompleteInput(props: AutocompleteInputProps) {
         />
 
         {props.isLoading && (
-          <ActivityIndicator size="small" color={colors.blue[300]} />
+          <ActivityIndicator
+            testID="activity-indicator"
+            size="small"
+            color={colors.blue[300]}
+          />
         )}
       </View>
 
