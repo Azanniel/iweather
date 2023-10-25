@@ -4,6 +4,9 @@
   "moduleNameMapper": {
     "@/(.*)": "<rootDir>/src/$1"
   },
+  "setupFiles": [
+    "<rootDir>/tests/mocks/async-storage.js"
+  ],
   "setupFilesAfterEnv": [
     "@testing-library/jest-native/extend-expect"
   ],
