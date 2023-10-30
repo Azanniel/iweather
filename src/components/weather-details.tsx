@@ -20,7 +20,10 @@ interface WeatherDetailsProps {
 
 export function WeatherDetails({ data }: WeatherDetailsProps) {
   return (
-    <View className="w-full divide-y divide-gray-700 rounded-xl bg-gray-800 px-4">
+    <View
+      testID="weather-details"
+      className="w-full divide-y divide-gray-700 rounded-xl bg-gray-800 px-4"
+    >
       <View className="w-full flex-row items-center py-5">
         <ThermometerIcon width={24} height={24} />
 
