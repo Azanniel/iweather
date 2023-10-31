@@ -4,7 +4,7 @@ import dayjs from 'dayjs'
 import { weatherIcons } from '@/utils/weather-icons'
 import { isDaytimeNow } from '@/utils/is-daytime-now'
 
-interface Weather {
+export interface Weather {
   temp: string
   temp_min: string
   temp_max: string
@@ -26,12 +26,13 @@ export function WeatherToday(props: WeatherTodayProps) {
     : props.weather.details.bg_night
 
   const Icon = isDay
-    ? props.weather.details?.icon_day
-    : props.weather.details?.icon_night
+    ? props.weather.details.icon_day
+    : props.weather.details.icon_night
 
   return (
     <View className="rounded-xl bg-gray-800">
       <ImageBackground
+        testID={'image-background'.concat(isDay ? '-day' : '-night')}
         className="justify-between overflow-hidden rounded-lg bg-gray-700"
         resizeMode="cover"
         source={backgroundImg}
@@ -41,7 +42,9 @@ export function WeatherToday(props: WeatherTodayProps) {
             {props.city}
           </Text>
 
-          <Text className="font-sans text-xs text-gray-100">{today}</Text>
+          <Text testID="week-day" className="font-sans text-xs text-gray-100">
+            {today}
+          </Text>
         </View>
 
         <View className="mt-2 w-full flex-row">
@@ -59,7 +62,11 @@ export function WeatherToday(props: WeatherTodayProps) {
             </Text>
           </View>
 
-          <Icon width={120} height={120} />
+          <Icon
+            testID={'weather-icon'.concat(isDay ? '-day' : '-night')}
+            width={120}
+            height={120}
+          />
         </View>
       </ImageBackground>
     </View>
