@@ -11,6 +11,17 @@ describe('Component: Loading', () => {
     expect(sut).toBeTruthy()
   })
 
+  it('should be able to render correctly layout style', () => {
+    const { queryByTestId } = render(<Loading />)
+
+    const sut = queryByTestId('loading')
+
+    expect(sut).toHaveStyle({
+      alignItems: 'center',
+      justifyContent: 'center',
+    })
+  })
+
   it('should be render indicator in blue color', () => {
     const { getByTestId } = render(<Loading />)
 
