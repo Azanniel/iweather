@@ -30,6 +30,8 @@ O próximo aprendizado foi em relação ao teste de componentes e foi aplicado o
 
 O Mock permite substituir um objeto real e criar uma simulação durante a execução dos testes. É usado para isolar um código que está sendo testado fornecendo um comportamento predefinido e para não depender de fatores externos.
 
+Na parte de testes de Hooks conhecemos as funções `waitFor` e `act` que são responsáveis por conseguirmos aguardar a atualização de estado de um contexto quando estamos testando nosso hook.
+
 ## ☕ Contatos
 
 Você vai me encontrar em qualquer uma das redes sociais abaixo:
