@@ -42,7 +42,7 @@ export function AutocompleteInput(props: AutocompleteInputProps) {
             <TouchableOpacity
               key={city.latitude}
               activeOpacity={0.6}
-              onPress={() => (props.onPress ? props.onPress(city) : undefined)}
+              onPress={() => props.onPress && props.onPress(city)}
             >
               <Text className="bg-gray-500 px-5 py-4 font-sans text-base text-gray-100">
                 {city.name}

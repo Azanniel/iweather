@@ -32,6 +32,8 @@ O Mock permite substituir um objeto real e criar uma simulação durante a execu
 
 Na parte de testes de Hooks conhecemos as funções `waitFor` e `act` que são responsáveis por conseguirmos aguardar a atualização de estado de um contexto quando estamos testando nosso hook.
 
+Por fim, finalizamos o aprendizado com o coverage report que é um relatório que fornece informações sobre a cobertura do nosso código pelos testes. Ele mostra a porcentagem de linhas de código, funções, instruções ou ramificações que foram executadas durante a execução dos testes. O objetivo dele é avaliar o quanto do código esta sendo testado pelos testes automatizados.
+
 ## ☕ Contatos
 
 Você vai me encontrar em qualquer uma das redes sociais abaixo:
