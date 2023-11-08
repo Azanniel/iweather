@@ -25,7 +25,7 @@ describe('Component: Loading', () => {
   it('should be render indicator in blue color', () => {
     const { getByTestId } = render(<Loading />)
 
-    const sut = getByTestId('indicator')
+    const sut = getByTestId('loading-indicator')
 
     expect(sut.props.color).toEqual(colors.blue[300])
   })

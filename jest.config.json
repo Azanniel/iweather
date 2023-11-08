@@ -2,10 +2,12 @@
   "preset": "jest-expo",
   "rootDir": ".",
   "moduleNameMapper": {
-    "@/(.*)": "<rootDir>/src/$1"
+    "@/(.*)": "<rootDir>/src/$1",
+    "tests/(.*)": "<rootDir>/tests/$1"
   },
   "setupFiles": [
-    "<rootDir>/tests/mocks/async-storage.js"
+    "<rootDir>/tests/mocks/async-storage.js",
+    "<rootDir>/tests/mocks/react-native-safe-area-context.js"
   ],
   "setupFilesAfterEnv": [
     "@testing-library/jest-native/extend-expect"

@@ -5,7 +5,7 @@ describe('Component: Autocomplete Input', () => {
   it('should be render component without activity indicator if is loading prop is undefined', () => {
     render(<AutocompleteInput data={[]} placeholder="Example placeholder" />)
 
-    const activityIndicator = screen.queryByTestId('activity-indicator')
+    const activityIndicator = screen.queryByTestId('activity-indicator-input')
     expect(activityIndicator).toBeNull()
   })
 
@@ -18,7 +18,7 @@ describe('Component: Autocomplete Input', () => {
       />,
     )
 
-    const activityIndicator = screen.getByTestId('activity-indicator')
+    const activityIndicator = screen.getByTestId('activity-indicator-input')
     expect(activityIndicator).toBeTruthy()
   })
 
@@ -51,7 +51,7 @@ describe('Component: Autocomplete Input', () => {
       <AutocompleteInput data={[]} placeholder="Example placeholder" />,
     )
 
-    const options = getByTestId('options')
+    const options = getByTestId('autocomplete-options')
     expect(options.children).toHaveLength(0)
   })
 })

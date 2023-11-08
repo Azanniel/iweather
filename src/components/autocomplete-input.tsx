@@ -17,6 +17,7 @@ export function AutocompleteInput(props: AutocompleteInputProps) {
     <View className="relative z-10 w-full">
       <View className="h-14 w-full flex-row rounded-lg bg-gray-600 px-5 font-sans text-base">
         <TextInput
+          testID="autocomplete-input-trigger"
           className="flex-1 text-zinc-100"
           placeholder={props.placeholder}
           placeholderTextColor={colors.gray[400]}
@@ -26,7 +27,7 @@ export function AutocompleteInput(props: AutocompleteInputProps) {
 
         {props.isLoading && (
           <ActivityIndicator
-            testID="activity-indicator"
+            testID="activity-indicator-input"
             size="small"
             color={colors.blue[300]}
           />
@@ -34,7 +35,7 @@ export function AutocompleteInput(props: AutocompleteInputProps) {
       </View>
 
       <View
-        testID="options"
+        testID="autocomplete-options"
         className="absolute left-0 right-0 top-16 divide-y divide-gray-600 overflow-hidden rounded-lg"
       >
         {props.data.map((city) => {
