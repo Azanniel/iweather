@@ -4,6 +4,9 @@
   </h1>
 
   > O IWeather é uma aplicação que mostra as informações do clima dado uma cidade que é informada à ele. A finalidade dessa aplicação é aplicar os conceitos de testes e CI/CD.
+
+  ![image](https://github.com/Azanniel/iweather/assets/71537090/f992a9a0-3c8a-43b5-bfa7-86da4344bb6d)
+
 </div>
 
 ## 🎮 Techs Relevantes
