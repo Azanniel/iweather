@@ -1,7 +1,7 @@
 import { api } from '@/services/open-weather/api'
 import { WeatherAPIResponse } from '@/services/open-weather/get-weather-by-city'
 import { render, waitFor } from 'tests/utils/custom-render'
-import Dashboard from './dashboard'
+import Dashboard from '../app/dashboard'
 import { saveStorageCity } from '@/libs/storage/city-storage'
 
 jest.mock('@/hooks/use-dashboard-route', () => {

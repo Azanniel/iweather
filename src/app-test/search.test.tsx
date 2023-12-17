@@ -1,4 +1,4 @@
-import Search from './search'
+import Search from '../app/search'
 import { render, fireEvent, waitFor, screen } from 'tests/utils/custom-render'
 import { CityAPIResponse } from '@/services/open-weather/get-city-by-name'
 import { api } from '@/services/open-weather/api'
