@@ -80,7 +80,7 @@ export default function Dashboard() {
 
   return (
     <SafeAreaView className="flex-1 bg-gray-900 px-5 pb-0 pt-2">
-      <View className="mb-2">
+      <View className="z-10 mb-2">
         <AutocompleteInput
           data={cities}
           isLoading={isSearching}
