@@ -22,13 +22,22 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#13131A"
-      }
+      },
+      "package": "com.azanniel.iweather"
     },
     "plugins": [
       "expo-router"
     ],
     "experiments": {
       "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "0a325b5a-dafb-451d-8097-e0df6008e130"
+      }
     }
   }
 }
