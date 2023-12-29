@@ -37,6 +37,12 @@ Na parte de testes de Hooks conhecemos as funções `waitFor` e `act` que são r
 
 Por fim, finalizamos o aprendizado com o coverage report que é um relatório que fornece informações sobre a cobertura do nosso código pelos testes. Ele mostra a porcentagem de linhas de código, funções, instruções ou ramificações que foram executadas durante a execução dos testes. O objetivo dele é avaliar o quanto do código esta sendo testado pelos testes automatizados.
 
+## 🧑‍💻 CI & CD
+
+O CI é uma prática de desenvolvimento em que as alterações de código são integradas regularmente a um repositório principal. É executado testes para garantir que o novo código não quebre a aplicação existente. Já o CD automatiza o processo de implantação da aplicação, entregando novas funcionalidades ou correções de bugs aos usuários de forma rápida e confiável. O CI mantém a estabilidade do código, enquanto o CD automatiza a implementação e implantação do software em produção.
+
+O GitHub Actions é uma plataforma de integração contínua e entrega contínua (CI/CD). Com o GitHub Actions, podemos automatizar a compilação, testes e implantação de nossa aplicação. Podemos criar e gerenciar fluxos de trabalho a partir de eventos, como um push em um repositório. Para criar esse fluxo de trabalho, usamos um arquivo YAML, onde configuramos os steps e definimos o que deve ser feito
+
 ## ☕ Contatos
 
 Você vai me encontrar em qualquer uma das redes sociais abaixo:
