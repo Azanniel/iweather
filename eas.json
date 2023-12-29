@@ -9,15 +9,8 @@
       },
       "android": {
         "distribution": "internal"
-      },
-      "env": {
-        "EXPO_PUBLIC_WEATHER_APP_ID": "55fcf576a4cfafa329603f1399bd38cd"
       }
     },
-    "production": {
-      "env": {
-        "EXPO_PUBLIC_WEATHER_APP_ID": "55fcf576a4cfafa329603f1399bd38cd"
-      }
-    }
+    "production": {}
   }
 }
