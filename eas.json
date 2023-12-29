@@ -6,6 +6,7 @@
     "preview": {
       "autoIncrement": true,
       "android": {
+        "buildType": "app-bundle",
         "distribution": "internal",
         "autoIncrement": "versionCode"
       },
